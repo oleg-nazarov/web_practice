@@ -1,0 +1,33 @@
+<head>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        console.log("DOMContentLoaded");
+      });
+      window.addEventListener("load", function () {
+        console.log("load");
+      });
+    </script>
+
+    <script>
+      console.log("initialize...");
+    </script>
+  
+    <!-- takes a long time to download -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- 1. w/o any script tag, DOMContentLoaded is triggered before styles.css is loaded -->
+
+    <!-- 2. with async, DOMContentLoaded is triggered before styles.css is loaded -->
+    <!-- <script async src="script.js"></script> -->
+    
+    <!-- 3. a script tag w/o attributes or with defer waits for styles.css to load; and only then DOMContentLoaded is triggered -->
+    <script src="script.js"></script>
+    <!-- <script defer src="script.js"></script> -->
+  </head>
+  <body>
+    <!-- 4. this script also waits for styles.css to load; and then DOMContentLoaded is triggered -->
+    <!-- <script>
+      console.log("...bottom");
+    </script> -->
+  </body>
+  
