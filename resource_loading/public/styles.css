@@ -1,0 +1,7 @@
+body {
+  width: 95vw;
+  height: 95vh;
+  background-image: url('https://en.js.cx/clipart/train.gif?speed=1&cache=0');
+  filter: blur(20px);
+}
+  
